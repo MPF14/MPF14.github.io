@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <header class="navbar">
+    <nav class="nav-left">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="editions.html"><u>Editions</u></a></li>
+      </ul>
+    </nav>
+
+    <h1 class="logo">Equitable.fyi</h1>
+    <div class="nav-right"></div>
+  </header>
+
+  <button class="toggle-btn" id="toggle-filters">Show Filters</button>
+
+  <div class="controls" id="controls">
+    <label for="filter-topic">Topic:</label>
+    <select id="filter-topic">
+      <option value="all">All</option>
+      <option value="ICE">ICE</option>
+      <option value="Immigration">Immigration</option>
+      <option value="Equity">Equity</option>
+    </select>
+
+    <label for="filter-author">Author:</label>
+    <select id="filter-author">
+      <option value="all">All</option>
+      <option value="Maddie F">Maddie F</option>
+      <option value="Alex R">Alex R</option>
+    </select>
+
+    <label for="sort-select">Sort by:</label>
+    <select id="sort-select">
+      <option value="date">Date</option>
+      <option value="author">Author</option>
+      <option value="topic">Topic</option>
+    </select>
+  </div>
+  <div id="articles-list"></div>
+
+  <script src="assets/js/articles.js"></script>
+  <script src="assets/js/sort.js"></script>
+</body>
+</html>

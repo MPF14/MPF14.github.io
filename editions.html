@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond|Cormorant+Garamond">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+</head>
+
+<body>
+  <header class="navbar">
+    <nav class="nav-left">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="editions.html"><u>Editions</u></a></li>
+      </ul>
+    </nav>
+
+    <h1 class="logo">Equitable.fyi</h1>
+    <div class="nav-right"></div>
+  </header>
+
+  <button class="toggle-btn" id="toggle-filters">Show Filters</button>
+
+  <div id="controls">
+  
+    <label>Filter by Tag:</label>
+    <select id="filter-tags">
+      <option value="all">All</option>
+    </select>
+
+    <label>Filter by Author:</label>
+    <select id="filter-authors">
+      <option value="all">All</option>
+    </select>
+
+  <label>Sort by:</label>
+  <select id="sort-select">
+    <option value="date">Date</option>
+    <option value="title">Title</option>
+  </select>
+
+</div>
+  <div id="articles-list"></div>
+
+  <script src="assets/js/articles.js"></script>
+  <script src="assets/js/sort.js"></script>
+</body>
+</html>
