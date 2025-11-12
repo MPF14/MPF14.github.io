@@ -11,6 +11,9 @@ h1 {
     margin-top: 20px;
     color: #333;
 }
+* {
+  box-sizing: border-box;
+}
 
 /* --- Navbar Styles --- */
 .navbar {
@@ -19,7 +22,9 @@ h1 {
   justify-content: space-between;
   background-color: #E1CCBE;
   padding: 40px 40px;
+  margin: 0px;
   position: relative;
+  width: 100%;
 }
 .nav-left ul {
   list-style: none;
@@ -55,8 +60,6 @@ h1 {
 @media (max-width: 800px) {
      
 }
-
-
 
 /* --- Text Styles --- */
 .bodytext {
@@ -128,13 +131,11 @@ h1 {
     background-color: white;
     color: #466157;
 }
-
 select {
     padding: 6px 10px;
     border-radius: 6px;
     font-size: 16px;
 }
-
 
 /* --- tags --- */
 .tag {
@@ -185,11 +186,13 @@ form {
     color: #466157;
     justify-items: center;
 }
-
+.form-container h2 {
+    font-family: "Cormorant Garamond", serif;
+    margin-bottom: 25px;
+}
 .form-container {
     padding: 5px;
 }
-
 .form-header {
     display: flex;
     justify-content: center;
@@ -203,7 +206,14 @@ form {
     color: #466157;
     background-color: #E1CCBE;
 }
-
+#signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
 input[type=text], input[type=submit], input[type=email] {
     font-family: "EB Garamond", serif;
     background-color: #EEEDEB;
@@ -217,7 +227,6 @@ input[type=text], input[type=submit], input[type=email] {
     border-radius: 2px;
     box-sizing: border-box;
 }
-
 input[type=text]:focus, input[type=email]:focus  {
     outline: none;
     border: 1.5px solid #787461;
@@ -241,6 +250,16 @@ input[type=submit]:hover {
 }
 input[type=email]:hover {
     border-color: #787461;
+}
+#footer {
+    font-family: "EB Garamond", serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #E1CCBE;
+    color: #466157;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 /* --- Article Page --- */
@@ -326,42 +345,42 @@ p.articles-title {
 
 /* --- About Page --- */
 .about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: #EEEDEB;
-  padding: 100px 20px;
-  gap: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #EEEDEB;
+    padding: 100px 20px;
+    gap: 10vw;
+    width: 100%;
 }
-
 /* --- Text side --- */
 .about-text {
-  /*flex: 1 1 400px;*/
-  max-width: 40vw;
-  width: 40vw;
+    /*flex: 1 1 400px;*/
+    max-width: 40vw;
+    width: 40vw;
 }
 
 .about-text p {
-  font-family: "EB Garamond", serif;
-  font-size: 2.7vw;
-  line-height: 1.6;
-  color: #466157;
-  margin: 10px;
+    font-family: "EB Garamond", serif;
+    font-size: 2.7vw;
+    line-height: 1.6;
+    color: #466157;
+    margin: 10px;
 }
 
 /* --- Image side --- */
 .about-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-image img {
-  width: 100%;
-  height: auto;
-  max-width: 40vw;
-  padding: 20px;
+    width: 100%;
+    height: auto;
+    max-width: 40vw;
+    padding: 20px;
 }
 
 @media (max-width: 950px) {
