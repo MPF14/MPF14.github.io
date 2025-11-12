@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond|Cormorant+Garamond">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <div id="navbar"></div>
-  <script>
-    function navbar() {
-    fetch("../assets/navbar.html")
-    .then(response => response.text())
-    .then(html => document.getElementById("navbar").innerHTML = html)
-    .catch(err => console.error("Failed to load navbar:", err));
-    }
-    navbar();
-  </script>
+  <script src="../assets/js/navbar.js"></script>
   <div class="article">
     <h2 class="title">Interview with Geoffrey Fletcher</h2>
     <p class="subtext">Transcribed by Matilda Fletcher</p>
