@@ -16,37 +16,117 @@ h1 {
 }
 
 /* --- Navbar Styles --- */
+/* Basic layout */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #E1CCBE;
-  padding: 40px 40px;
-  margin: 0px;
-  position: relative;
+  padding: 40px;
   width: 100%;
+  box-sizing: border-box;
 }
 .nav-left ul {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
+.nav-left ul li {
+  margin-right: 20px;
+}
 .nav-left a {
-  color: #ffffff;
+  color: white;
+  font-weight: 500;
+}
+.nav-left ul li a.active {
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+/* Burger icon hidden on wide screens */
+.burger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+}
+
+/* Responsive behavior */
+@media (max-width: 700px) {
+  .nav-left ul {
+    display: none; /* hide links by default on narrow screens */
+    flex-direction: column;
+    background-color: #E1CCBE;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .nav-left ul.show {
+    display: flex; /* show when toggled */
+  }
+  .burger {
+    display: block; /* show burger on small screens */
+  }
+}
+/* --- Burger Icon --- */
+#burger {
+  display: none;            /* hidden on wide screens */
+  font-size: 30px;          /* size of the burger icon */
+  cursor: pointer;          /* pointer on hover */
+  color: white;             /* contrast with navbar background */
+  user-select: none;        /* prevent accidental text selection */
+}
+
+/* --- Nav Links --- */
+#nav-links {
+  display: flex;            /* horizontal layout by default */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-links li {
+  margin-right: 20px;
+}
+
+#nav-links li a {
   text-decoration: none;
-  font-size: 18px;
-  padding: 5px 5px;
-  transition: all 0.3s ease;
+  color: white;
+  font-weight: 500;
 }
-.nav-left a:hover {
-    color: #d0bdb0;
+
+/* --- Responsive: below 700px --- */
+@media (max-width: 700px) {
+  #burger {
+    display: block;         /* show burger icon on small screens */
+  }
+
+  #nav-links {
+    display: none;          /* hide links by default */
+    flex-direction: column; /* vertical menu when shown */
+    background-color: #E1CCBE;
+    position: absolute;
+    top: 100%;              /* appear below navbar */
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  #nav-links.show {
+    display: flex;          /* show links when burger is clicked */
+  }
+
+  #nav-links li {
+    margin: 10px 0;         /* vertical spacing for mobile menu */
+  }
 }
-.nav-right {
-  width: 150px;
-  color:#E1CCBE;
-}
+
+
 .logo {
   font-family: "Cormorant Garamond", serif;
   font-size: 36px;
