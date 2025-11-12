@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond|Cormorant+Garamond");
+body {
+  background-color: #FFFFFF;
+  font-family: "EB Garamond", serif;
+  margin: 0px;
+}
+h2, p{
+  margin: 10px;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* --- Navbar Styles --- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #E1CCBE;
+  padding: 40px 40px;
+  position: relative;
+}
+.nav-left ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+.nav-left a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 5px;
+  transition: all 0.3s ease;
+}
+.nav-left a:hover {
+    color: #d0bdb0;
+}
+.nav-right {
+  width: 150px;
+  color:#E1CCBE;
+}
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  color: #ffffff;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+@media (max-width: 800px) {
+     
+}
+
+
+
+/* --- Text Styles --- */
+.bodytext {
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #466157;
+  align-items: center;
+  text-align: left;
+  margin: 0px 0px;
+}
+.title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 80px;
+  color: #466157;
+  margin: 20px 5px 20px 5px;
+  align-items: center;
+  text-align: center;
+}
+.subtext {
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  color: #466157;
+  margin: 5px 5px 50px 5px;
+  align-items: center;
+  text-align: center;
+}
+.date {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    color: #466157;
+    margin: 20px 10px;
+    align-items: center;
+    text-align: left;
+}
+
+/* --- Filter Controls --- */
+.controls {
+    display: none; /* hidden by default */
+    justify-content: center;
+    gap: 25px;
+    margin: 20px;
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+}
+.controls.visible {
+    display: flex; /* shown when class added */
+}
+#controls {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+#controls.visible {
+    display: flex;
+}
+#controls label {
+    font-weight: 500;
+    color: #466157;
+}
+#controls select {
+    padding: 4px 8px;
+    font-family: inherit;
+    border-radius: 4px;
+    border: 1px solid #aba9a6;
+    background-color: white;
+    color: #466157;
+}
+
+select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+
+/* --- tags --- */
+.tag {
+  margin-top: 8px;
+}
+.tags {
+  display: inline-block;
+  background-color: #EEEDEB;
+  color: #466157;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+/* --- Toggle Button --- */
+.toggle-btn {
+    display: block;
+    margin: 10px auto 0;
+    color: #466157;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+#toggle-filters {
+    display: block;
+    margin: 30px auto 10px;
+    padding: 14px 20px;
+    border: none;
+    background-color: #E1CCBE;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: inherit;
+}
+#toggle-filters:hover {
+    background-color: #e8d9d2;
+}
+
+/* --- Footer Styles --- */
+form {
+    font-family: "EB Garamond", serif;
+    text-align: center;
+    padding: 40px;
+    background-color: #E1CCBE;
+    color: #466157;
+    justify-items: center;
+}
+
+.form-container {
+    padding: 5px;
+}
+
+.form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    width: 500px;
+    padding: 20px;
+}
+
+input[type=text], input[type=submit] {
+    font-family: "EB Garamond", serif;
+    background-color: #EEEDEB;
+    color: #466157;
+    width: 400px;
+    height: 40px;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1.5px solid #EEEDEB;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border: 1.5px solid #787461;
+}
+
+input::placeholder {
+  color: #787461;
+}
+
+input[type=submit] {
+    background-color: #E1CCBE;
+    color: #787461;
+    border: 1.5px solid #787461;
+    width: 400px;
+    height: 35px;
+    font-size: 17px;
+    line-height: 0px;
+}
+
+input[type=submit]:hover {
+    background-color: #d0bdb0;
+    color: #EEEDEB;
+    border-color: #EEEDEB;
+
+}
+
+/* --- Article Page --- */
+.article {
+    max-width: 50vw;
+    margin: 75px auto 100px auto;
+    padding: 20px 20px;
+}
+.article .bodytext{
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #466157;
+    margin: 10px;
+}
+.speaker {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #466157;
+    margin: 40px 10px 10px;
+}
+.bio {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    color: #466157;
+    margin: 10px 10px 50px;
+    font-style: italic;
+}
+.bio i {
+    font-style: normal;
+}
+
+/* --- Articles --- */
+ #articles-list {
+  display: grid; /* ← switch from flex to grid */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 5px;
+  align-items: center;
+}
+.articles-lists {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+.articles {
+    padding: 12px;
+    background: #E1CCBE;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+.articles:hover {
+    background-color: #e8d9d2;
+}
+.articles a {
+    color: #466157;
+    font-weight: bold;
+    text-decoration: none;
+}
+.articles small {
+    display: block;
+    color: #202328;
+    margin-top: 4px;
+}
+.articles img {
+  width: 50%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  color:#202328;
+}
+p.articles-title {
+    font-family: "EB Garamond", serif;
+    margin-top: 5px;
+    margin: 0;
+    padding: 0px;
+}
+
+/* --- About Page --- */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #EEEDEB;
+  padding: 100px 20px;
+}
+
+/* --- Text side --- */
+.about-text {
+  /*flex: 1 1 400px;*/
+  max-width: 40vw;
+  width: 40vw;
+}
+
+.about-text p {
+  font-family: "EB Garamond", serif;
+  font-size: 2.7vw;
+  line-height: 1.6;
+  color: #466157;
+  margin: 10px;
+}
+
+/* --- Image side --- */
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  max-width: 40vw;
+  padding: 20px;
+}
+.about-spacer {
+  flex: 0.5 0 5vw; /* fixed space between text and image */
+}
+/* --- When viewport <900px: stack image on top --- */
+@media (max-width: 900px) {
+    .about {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .about img {
+        aspect-ratio: 2 / 1; /* maintain a cropped rectangle */
+        height: auto;
+        object-fit: cover;
+    }
+    .about-text p {
+        font-size: 3.5vw;
+    }
+    .about-text {
+        /*flex: 1 1 400px;*/
+        max-width: 80vw;
+        width: 80vw;
+        height: auto;
+        padding: 2vw 2vw;
+    }   
+    .about-image {
+        height: auto;
+    }
+    .about-image img {
+        max-width: 90%;
+        padding: 5vw 2vw;
+    }
+    .about-spacer {
+        flex: 0 0 0;
+    }   
+}
